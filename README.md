@@ -27,5 +27,5 @@ Welcome to my personal portfolio website built with **React**, styled with **Boo
 
 ---
 
-## 📂 Folder Structure
+
 
