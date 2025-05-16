@@ -1,0 +1,99 @@
+.projects-content {
+  animation: fadeInUp 1.2s ease forwards;
+  transform-style: preserve-3d;
+  max-width: 900px;
+  text-align: center;
+}
+
+.projects-title {
+  cursor: default;
+  transition: transform 0.4s ease, color 0.4s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.projects-title:hover {
+  transform: rotateY(12deg) rotateX(6deg) translateZ(20px);
+  color: #0dcaf0; /* Bootstrap cyan */
+  text-shadow: 0 5px 20px rgba(13, 202, 240, 0.8);
+}
+
+/* Using flexbox grid with gap for spacing */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* space between cards */
+  justify-content: center;
+}
+
+/* Each card flex-basis for 3 cards per row with spacing */
+.project-card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 280px;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 25px rgba(13, 202, 240, 0.8);
+  transform: translateY(-8px);
+}
+
+.project-name {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0dcaf0;
+}
+
+.project-desc {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Project link button styling */
+.project-link-btn {
+  align-self: flex-start;
+  border-radius: 50px;
+  padding: 0.45rem 1.4rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-link-btn:hover {
+  background-color: #0dcaf0;
+  color: #121212;
+  box-shadow: 0 8px 20px rgba(13, 202, 240, 0.7);
+}
+
+/* Fade up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .project-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}

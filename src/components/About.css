@@ -1,0 +1,52 @@
+.about-section {
+  background-color: #f8f9fa; /* light gray background */
+  color: #212529; /* dark text */
+  min-height: 70vh;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.about-title {
+  color: #0d6efd; /* bootstrap primary blue */
+  cursor: default;
+  transition: transform 0.4s ease, color 0.4s ease;
+  text-shadow: none;
+  margin-bottom: 3rem !important;
+  user-select: none;
+}
+
+.about-title:hover {
+  transform: rotateY(12deg) rotateX(6deg) translateZ(20px);
+  color: #0a58ca;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-img {
+  
+  max-width: 300px;
+  
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+}
+
+.about-img:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.4);
+}
+
+/* Fade up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

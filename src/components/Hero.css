@@ -1,0 +1,50 @@
+.hero-content {
+  animation: fadeInUp 1.2s ease forwards;
+  transform-style: preserve-3d;
+}
+
+/* 3D tilt effect on title hover */
+.hero-title {
+  transition: transform 0.4s ease, color 0.4s ease;
+  cursor: default;
+  /* add subtle text shadow */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title:hover {
+  transform: rotateY(15deg) rotateX(8deg) translateZ(25px);
+  color: #0dcaf0; /* Bootstrap cyan */
+  text-shadow: 0 5px 20px rgba(13, 202, 240, 0.8);
+}
+
+/* Slight fade for subtitle */
+.hero-subtitle {
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.hero-subtitle:hover {
+  opacity: 1;
+}
+
+/* Button hover scale and shadow */
+.hero-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(13, 202, 240, 0.6);
+}
+
+/* Fade up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
