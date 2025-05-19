@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import './Navbar.css'; // Optional: if you want custom styles
 
 function Navbar() {
